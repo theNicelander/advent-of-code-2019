@@ -15,7 +15,8 @@ df['fuel'] = df.apply(get_fuel, axis=1)
 # part 1 solution
 print(df['fuel'].sum())
 
-# part 2 requires recursion
+# part 2 requires a while loop, which pandas isn't great at
+# convert dataframe to list instead and use native python to solve
 mass_list = df.loc[:, 0].values.tolist()
 
 total = 0
